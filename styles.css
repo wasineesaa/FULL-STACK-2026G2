@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap');
+
+body {
+    font-family: 'Mali', cursive, sans-serif;
+    background-color: #fffbeb;
+}
+
+/* เอฟเฟกต์ปุ่มและการ์ดสไตล์เด็กๆ นุ่มนวล */
+.kid-btn {
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.kid-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 3px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.kid-btn:active {
+    transform: translateY(1px);
+}
+
+.kid-card {
+    transition: all 0.3s ease-in-out;
+}
+
+.kid-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}

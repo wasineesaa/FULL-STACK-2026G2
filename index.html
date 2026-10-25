@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaleWonder - คลังหนังสือนิทานแสนสนุก</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#FFFDF9] text-gray-800 antialiased selection:bg-pink-200">
+
+    <!-- Navigation Bar สไตล์ TaleWonder -->
+    <nav class="bg-white sticky top-0 z-40 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-amber-500 font-bold text-2xl">✨</span>
+                <span class="text-2xl font-bold tracking-tight text-[#E63946]">TaleWonder</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold text-gray-700">
+                <a href="#story-showcase" class="hover:text-pink-600">เข้าสู่ระบบ</a>
+                <a href="#story-showcase" class="hover:text-pink-600">หมวดหมู่</a>
+                <a href="#story-showcase" class="hover:text-pink-600">เกี่ยวกับเรา</a>
+                <button onclick="goToCategoryList('age1')" class="bg-[#FF6B6B] hover:bg-[#ff5252] text-white px-6 py-2.5 rounded-full shadow-md transition-all">
+                    ค้นหานิทาน
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- หน้าเลือกช่วงวัย (หน้าหมวดหมู่หลัก) -->
+        <div id="page-categories" class="page-view">
+            
+            <div class="mb-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+                <div>
+                    <span class="bg-amber-100 text-amber-800 text-xs font-bold px-4 py-1.5 rounded-full inline-block mb-3">คลังนิทานของเรา</span>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">แนะนำหมวดหมู่นิทานใน TaleWonder</h1>
+                </div>
+                <button onclick="goToCategoryList('age1')" class="self-start sm:self-auto border-2 border-amber-300 text-amber-800 hover:bg-amber-50 font-bold px-5 py-2.5 rounded-full text-sm transition-all">
+                    ดูแพ็คเกจการอ่านทั้งหมด →
+                </button>
+            </div>
+
+            <!-- ส่วนเลือกช่วงวัย (ดีไซน์กล่องตัวอักษรภาษาอังกฤษเท่ๆ ไร้รูปภาพกองหนังสือ) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16" id="story-showcase">
+                
+                <!-- หมวดที่ 1 -->
+                <div onclick="goToCategoryList('age1')" class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col cursor-pointer group">
+                    <div class="h-56 bg-gradient-to-br from-pink-400 via-rose-400 to-pink-600 p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 text-white/10 text-9xl font-black select-none">01</div>
+                        <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 tracking-widest uppercase">Ages 1 - 3 Years</span>
+                        <h2 class="text-white text-3xl sm:text-4xl font-black tracking-wider drop-shadow-md">BABY RHYMES</h2>
+                        <p class="text-white/90 text-xs font-bold mt-2">Interactive Sound & Pictures</p>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-pink-100 text-pink-700 text-xs font-bold px-3 py-1 rounded-md">วัย 1-3 ขวบ</span>
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-md">นิทานภาพและคำกลอน</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">นิทานภาพและคำกลอนสำหรับเด็กเล็ก</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                ภาพสีสันสดใส กระตุ้นประสาทสัมผัส การฟัง และคำศัพท์พื้นฐาน เพื่อพัฒนาการทางภาษาที่ดีของเด็กๆ
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-end text-sm font-bold text-pink-600">
+                            <span>ทดลองอ่าน →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- หมวดที่ 2 -->
+                <div onclick="goToCategoryList('age2')" class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col cursor-pointer group">
+                    <div class="h-56 bg-gradient-to-br from-emerald-400 via-teal-500 to-emerald-700 p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 text-white/10 text-9xl font-black select-none">02</div>
+                        <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 tracking-widest uppercase">Ages 4 - 6 Years</span>
+                        <h2 class="text-white text-3xl sm:text-4xl font-black tracking-wider drop-shadow-md">EQ & MORAL</h2>
+                        <p class="text-white/90 text-xs font-bold mt-2">Emotional Growth & Sharing</p>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-3 py-1 rounded-md">วัย 4-6 ขวบ</span>
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-md">นิทานอีคิว</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">นิทานอีคิวและคุณธรรมแสนสนุก</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                เสริมสร้างการจัดการอารมณ์ การแบ่งปัน และความเห็นอกเห็นใจผู้อื่น ออกแบบร่วมกับนักจิตวิทยาเด็ก
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-end text-sm font-bold text-emerald-600">
+                            <span>ทดลองอ่าน →</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- หมวดที่ 3 -->
+                <div onclick="goToCategoryList('age3')" class="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col cursor-pointer group">
+                    <div class="h-56 bg-gradient-to-br from-indigo-500 via-purple-500 to-indigo-800 p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 text-white/10 text-9xl font-black select-none">03</div>
+                        <span class="bg-white/20 backdrop-blur-md text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 tracking-widest uppercase">Ages 7+ Years</span>
+                        <h2 class="text-white text-3xl sm:text-4xl font-black tracking-wider drop-shadow-md">DISCOVERY</h2>
+                        <p class="text-white/90 text-xs font-bold mt-2">Adventure & Critical Thinking</p>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-md">วัย 7+ ขวบ</span>
+                                <span class="bg-gray-100 text-gray-600 text-xs font-bold px-3 py-1 rounded-md">ผจญภัยและความรู้</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">นิทานผจญภัยและความรู้รอบตัว</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                                ฝึกการคิดวิเคราะห์ การแก้ปัญหาเชิงตรรกะ และส่งเสริมนิสัยรักการอ่านในระยะยาว
+                            </p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-100 flex items-center justify-end text-sm font-bold text-indigo-600">
+                            <span>ทดลองอ่าน →</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- หน้ารายการนิทาน -->
+        <div id="page-preview-list" class="page-view hidden">
+            <div id="list-header-box" class="mb-8 flex items-center justify-between bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-100">
+                <button onclick="goBackToCategories()" id="list-back-btn" class="kid-btn text-sm font-bold text-gray-600 bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl">
+                    ← กลับหน้าหลัก
+                </button>
+                <div class="flex items-center gap-3">
+                    <span id="membership-status" class="text-xs font-bold bg-gray-100 text-gray-700 px-3 py-1.5 rounded-xl">สถานะ: ทั่วไป</span>
+                    <button onclick="toggleMembership()" id="membership-btn" class="kid-btn text-xs font-bold bg-amber-400 hover:bg-amber-500 text-white px-4 py-2 rounded-xl shadow-sm">
+                        สมัครพรีเมียม
+                    </button>
+                </div>
+            </div>
+
+            <div class="space-y-6" id="story-list-container"></div>
+        </div>
+
+        <!-- หน้าพรีวิวตัวอย่างเนื้อหา -->
+        <div id="page-story-preview" class="page-view hidden">
+            <div class="mb-6">
+                <button onclick="goBackToPreviewList()" id="preview-back-btn" class="kid-btn text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 px-5 py-2.5 rounded-xl shadow-sm border border-gray-200">
+                    ← กลับหน้ารายการ
+                </button>
+            </div>
+
+            <div id="preview-main-card" class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border-4 border-pink-300 relative max-w-3xl mx-auto text-center">
+                <div id="preview-badge" class="inline-block bg-pink-100 text-pink-700 font-bold text-sm px-4 py-1.5 rounded-full shadow-inner mb-4">
+                    หน้าตัวอย่างทดลองอ่าน
+                </div>
+
+                <h2 id="preview-page-story-title" class="text-2xl sm:text-3xl font-bold text-pink-600 mb-6">ชื่อนิทาน</h2>
+
+                <div id="preview-box-container" class="bg-pink-50 p-6 rounded-3xl border-2 border-dashed border-pink-300 mb-6 flex flex-col items-center">
+                    <div id="preview-img-container" class="bg-white w-full h-80 sm:h-96 rounded-2xl flex flex-col items-center justify-center p-2 text-center shadow-md border-2 border-pink-200 mb-6 overflow-hidden">
+                        <div id="preview-page-img" class="text-pink-900 font-bold text-lg px-6 py-3 rounded-2xl shadow-sm bg-pink-100">
+                            ภาพประกอบพรีวิวขนาดใหญ่
+                        </div>
+                    </div>
+
+                    <div class="w-full text-center space-y-3 px-2">
+                        <h3 id="preview-heading-label" class="text-xl font-bold text-pink-700">ข้อความพรีวิวตัวอย่าง</h3>
+                        <div id="preview-page-text" class="text-gray-800 text-lg sm:text-xl leading-relaxed space-y-2 font-bold max-w-xl mx-auto">
+                            ข้อความพรีวิว
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="proceedToFullEBook()" id="preview-action-btn" class="kid-btn bg-amber-500 hover:bg-amber-600 text-white font-bold px-8 py-4 rounded-2xl text-lg shadow-md">
+                        อ่านเรื่องเต็ม
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- หน้าอ่านอีบุ๊กเรื่องเต็มหลายหน้า -->
+        <div id="page-ebook" class="page-view hidden">
+            <div class="mb-6">
+                <button onclick="openPreviewPage(currentActiveStory.id)" id="ebook-back-btn" class="kid-btn text-sm font-bold text-gray-600 bg-white hover:bg-gray-50 px-5 py-2.5 rounded-xl shadow-sm border border-gray-200">
+                    ← กลับหน้าพรีวิว
+                </button>
+            </div>
+
+            <div id="ebook-main-card" class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border-4 border-pink-300 relative max-w-3xl mx-auto">
+                <div id="ebook-page-badge" class="absolute top-4 right-6 bg-pink-100 text-pink-700 font-bold text-sm px-4 py-1.5 rounded-full shadow-inner">
+                    หน้า 1 / 4
+                </div>
+
+                <div class="text-center mb-6">
+                    <h2 id="ebook-story-title" class="text-2xl sm:text-3xl font-bold text-pink-600">ชื่อนิทาน</h2>
+                </div>
+
+                <div id="ebook-box-container" class="bg-pink-50 p-6 rounded-3xl border-2 border-dashed border-pink-300 mb-6 flex flex-col items-center">
+                    <div id="ebook-img-container" class="bg-white w-full h-80 sm:h-96 rounded-2xl flex flex-col items-center justify-center p-2 text-center shadow-md border-2 border-pink-200 mb-6 overflow-hidden">
+                        <div id="ebook-page-img-desc" class="bg-pink-100 text-pink-900 font-bold text-lg px-6 py-3 rounded-2xl shadow-sm">
+                            ภาพประกอบนิทานขนาดใหญ่
+                        </div>
+                    </div>
+
+                    <div class="w-full text-center space-y-3 px-2">
+                        <h3 id="ebook-page-heading" class="text-xl font-bold text-pink-700">หัวข้อ</h3>
+                        <div id="ebook-page-content" class="text-gray-800 text-lg sm:text-xl leading-relaxed space-y-2 font-bold max-w-xl mx-auto">
+                            เนื้อหา
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center pt-4 border-t-2 border-pink-100" id="ebook-footer-border">
+                    <button onclick="prevEBookPage()" id="btn-prev" class="kid-btn bg-white hover:bg-gray-100 text-gray-700 font-bold px-6 py-3 rounded-2xl border-2 border-gray-200 disabled:opacity-30 disabled:cursor-not-allowed">
+                        หน้าก่อน
+                    </button>
+                    <span id="ebook-footer-text" class="text-pink-500 font-bold text-sm">พลิกอ่านสนุกเพลิดเพลิน</span>
+                    <button onclick="nextEBookPage()" id="btn-next" class="kid-btn bg-pink-500 hover:bg-pink-600 text-white font-bold px-6 py-3 rounded-2xl disabled:opacity-30 disabled:cursor-not-allowed">
+                        หน้าถัดไป
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- โมเดลแจ้งเตือนพรีเมียม -->
+    <div id="premium-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center shadow-2xl border-4 border-amber-400">
+            <h3 class="text-2xl font-bold text-amber-600 mb-2">สำหรับสมาชิกพรีเมียม</h3>
+            <p class="text-gray-600 text-sm font-semibold mb-6">กรุณาสมัครสมาชิกพรีเมียมเพื่อเปิดอ่านเนื้อหาเรื่องเต็มทุกหน้า</p>
+            <div class="flex gap-3">
+                <button onclick="closeModal()" class="kid-btn flex-1 bg-gray-100 text-gray-700 font-bold py-3 rounded-2xl">
+                    ยกเลิก
+                </button>
+                <button onclick="simulateUpgrade()" class="kid-btn flex-1 bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-2xl">
+                    สมัครพรีเมียม
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
